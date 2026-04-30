@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chalkboard Is Not Enough: Complete Guide to AI+GitHub for Teachers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f2e8;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            line-height: 1.65;
+            color: #1e2a1f;
+            padding: 2rem 1rem;
+        }
+
+        .paper-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            padding: 2.5rem 2.8rem 3.5rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #1a4c2a;
+            border-bottom: 3px solid #cfba95;
+            padding-bottom: 0.7rem;
+            line-height: 1.3;
+        }
+
+        .authors {
+            margin: 1rem 0 0.5rem;
+            font-size: 1rem;
+            color: #5a6b4e;
+            border-bottom: 1px solid #e2d6c2;
+            padding-bottom: 0.8rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #6b7a64;
+            margin-bottom: 1.8rem;
+            font-style: italic;
+            border-left: 4px solid #b7a06e;
+            padding-left: 1rem;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            color: #2c6e48;
+            border-left: 5px solid #c8af87;
+            padding-left: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #3d704d;
+        }
+
+        .abstract {
+            background-color: #f8f4ea;
+            padding: 1.3rem 1.8rem;
+            border-left: 6px solid #7f9f6e;
+            margin: 1.5rem 0;
+            font-size: 0.96rem;
+            border-radius: 0 20px 20px 0;
+        }
+
+        .keyword {
+            font-size: 0.8rem;
+            color: #6b7a64;
+            margin-top: 0.5rem;
+        }
+
+        .download-section {
+            background: linear-gradient(135deg, #eef3e6 0%, #e6f0e0 100%);
+            border-radius: 24px;
+            padding: 1.8rem;
+            margin: 1.5rem 0;
+            border: 2px solid #7e9f6e;
+        }
+
+        .download-method {
+            background: white;
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin: 1rem 0;
+            border-left: 5px solid #2c6e48;
+        }
+
+        .code-block {
+            background: #2c3227;
+            color: #f1ebda;
+            padding: 1rem;
+            border-radius: 14px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            white-space: pre-wrap;
+        }
+
+        .tip-box {
+            background: #fef5e0;
+            border-left: 4px solid #e6a017;
+            padding: 0.8rem 1rem;
+            margin: 0.8rem 0;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table {
+            background: #fefaf0;
+            border: 1px solid #d9cdae;
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd1bc;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #e2e9db;
+            font-weight: 700;
+        }
+
+        .figure-placeholder {
+            background: #f8f4ea;
+            border: 2px dashed #b8ad8a;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            color: #5a6b4e;
+        }
+
+        .testimony {
+            background: #eef3e6;
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+            font-style: italic;
+            border-left: 4px solid #b48c48;
+        }
+
+        .case-box {
+            background: #fefaf0;
+            border-left: 6px solid #7e9f6e;
+            padding: 1rem 1.5rem;
+            margin: 1.2rem 0;
+            border-radius: 16px;
+        }
+
+        .wave-box {
+            background: #e1f0fa;
+            border-left: 6px solid #2c6e48;
+            padding: 1rem 1.5rem;
+            margin: 1.2rem 0;
+            border-radius: 16px;
+            font-style: italic;
+        }
+
+        hr {
+            margin: 2rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #ddd0b6, transparent);
+        }
+
+        @media (max-width: 700px) {
+            .paper-container {
+                padding: 1.2rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="paper-container">
+    <h1>The Chalkboard Is Not Enough:<br>How AI+GitHub Turned Paper‑Based Teachers into Creators of Proactive Learning</h1>
+    <div class="authors">Authors: [Your Name], [NGO Partner Name], [Teacher Co‑authors]</div>
+    <div class="subhead">A complete, reproducible guide — including a step‑by‑step tutorial for creating your own AI‑powered educational apps and sharing them with the world via GitHub. Based on a case study of 32 Zanzibari teachers with nearly zero prior digital experience.</div>
+
+    <div class="abstract">
+        <strong>Abstract</strong><br>
+        For generations, the chalkboard has positioned students as passive receptors. This article documents what happens when teachers in Zanzibar — with nearly no prior app experience — were trained to use AI (“vibe coding”) and GitHub to create personalized, interactive educational apps. The result was a fundamental transformation of the teaching mode: teachers became designers of interactive experiences; students became proactive explorers, asking “what if” questions and persisting through challenges. Learning gains ranged from +26 to +64 percentage points across mathematics, physics, economics, and games. Beyond the case study, this article serves as a <strong>complete, practical tutorial</strong>. We provide a step‑by‑step guide to: (a) writing effective AI prompts; (b) testing and refining AI‑generated code; (c) using GitHub to save, version, and share apps; and (d) downloading apps for offline use on basic phones with no internet. The AI tools used in training included Claude, DeepSeek, Gemini, ChatGPT, and GitHub Copilot. Situating our work within the emerging literature on teacher‑in‑the‑loop AI (Balaji et al., 2025), we argue that our model extends the paradigm from OER adaptation to original app creation — a leap from content curation to software development. Readers can follow along and create their first app within one hour. All prompts, templates, and code examples are included. The chalkboard is not enough — but AI+GitHub is the leap, and anyone can make it.
+        <div class="keyword"><strong>Keywords:</strong> AI in education, GitHub tutorial, vibe coding, Claude, DeepSeek, Gemini, ChatGPT, Copilot, teacher as creator, proactive learning, low‑resource classrooms, Zanzibar, offline apps, reproducible guide, teacher-in-the-loop AI</div>
+    </div>
+
+    <h2>1. Introduction: Why the Chalkboard Is Not Enough — and the Specter of 1905</h2>
+    <p>In 1905, after 1,300 years, the imperial examination system of China was abolished. Millions of scholars who had dedicated their lives to memorizing the Confucian classics found themselves in a world that no longer valued their skills. They had not become lazy or incompetent. The world had changed around them. Western learning, industrial technology, and new forms of governance had rendered their expertise obsolete. The tragedy of the <em>xiucai</em> — the scholar who had passed the county exam — was not that he failed to study, but that he had studied for a world that no longer existed.</p>
+    <p>Today, as generative AI transforms knowledge work, many educators and parents feel a similar tremor. Will the skills we teach today — memorizing formulas, drilling grammatical rules, practicing procedural problem‑solving — become the equivalent of reciting the Four Books and Five Classics? Will our students, like those scholars of 1905, find that the system they mastered has collapsed beneath them, not because of their own failings, but because the tectonic plates of the economy have shifted? As one parent interviewed by BBC News described, watching her daughter begin first grade, she could not help but think of the scholars of 1905 — highly trained for a world that was about to disappear (BBC Chinese, 2026).</p>
+    <p>These anxieties are real. But they arise from a context of relative abundance — abundant educational technology, abundant debate about curriculum reform. There is another world where these debates are luxuries that do not apply. In Zanzibar, Tanzania, primary education remains overwhelmingly paper and chalk based. <strong>Nearly no teacher has ever used an educational app. Nearly no student has ever interacted with a digital quiz.</strong> The question is not "how do we adapt our over‑digitalized system to AI?" but rather <strong>"can we leapfrog directly from minimal digital tools to AI‑assisted creation?"</strong></p>
+    <p>Meanwhile, in March of 2026, City University of Hong Kong (CityUHK) partnered with Tencent WeTech Academy to host the "Principals' AI Open Class and Tencent AI Campus Tour" on the CityUHK campus (City University of Hong Kong, 2026). The opening ceremony was officiated by Hong Kong's Financial Secretary, Mr. Paul Chan Mo-po. For two consecutive days, over 100 primary and secondary school principals from Hong Kong sat in front of computers and, like students, learned to use AI to write small programs, including developing Weixin Mini Programmes with AI. The purpose was to let frontline educators feel the impact of AI firsthand, integrate it into their teaching systems, and prepare students for an AI‑driven era. The event also featured an AI Programming Bootcamp for university students, allowing them to experiment with various AI models, including Tencent's CodeBuddy and WorkBuddy, which are designed for users without a programming background (City University of Hong Kong, 2026).</p>
+    <p>This study answers that question with a resounding yes. We trained 32 Zanzibari teachers — with nearly no prior app experience, and zero coding knowledge — to use generative AI and GitHub to build their own interactive educational apps. The AI tools used in training included <strong>Claude, DeepSeek, Gemini, ChatGPT, and GitHub Copilot</strong>. Within three days, 93% had created functional apps using one or more of these tools. Students who had rarely or never seen a teaching app were suddenly learning fractions with interactive pizzas, simulating Newton's laws with animated boats, and shifting supply‑and‑demand curves on a phone screen. The chalkboard is not enough — but AI+GitHub is the leap.</p>
+
+    <div class="comparison-table">
+        <strong>Table 1: The Transformation of Teaching Mode — Before and After AI+GitHub</strong>
+        <table>
+            <thead><tr><th>Dimension</th><th>Before (Chalkboard Only)</th><th>After (Chalkboard + AI+GitHub Apps)</th></tr></thead>
+            <tbody>
+                <tr><th>Teacher role</th><td>Dispenser of information</th><td>Designer of interactive experiences</th></tr>
+                <tr><th>Student role</th><td>Passive receiver (listens, copies)</th><td>Proactive actor (explores, tests)</th></tr>
+                <tr><th>Feedback</th><td>Delayed (days, after grading)</th><td>Immediate (per action, per answer)</th></tr>
+                <tr><th>Error handling</th><td>Public correction or hidden mistake</th><td>Private, safe, iterative ("try again")</th></tr>
+                <tr><th>Student questions</th><td>Rare (clarification only)</th><td>Frequent ("what if," "why," "how")</th></tr>
+                <tr><th>Engagement duration</th><td>Declines after 10–15 minutes</th><td>Sustained 30+ minutes; students request more</th></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>2. Literature Review: Foundations of the Leap and the Teacher-in-the-Loop Paradigm</h2>
+    <p>Our intervention is grounded in established learning theories. <strong>Constructivism</strong> (Piaget, 1952, 1954; Vygotsky, 1978) holds that learning is active construction, not passive reception — students must act on information to internalize it. <strong>Self‑Determination Theory</strong> (Deci & Ryan, 2000) identifies autonomy, competence, and relatedness as drivers of intrinsic motivation. Interactive apps provide all three: choice (autonomy), immediate mastery feedback (competence), and collaboration around shared devices (relatedness). <strong>Feedback Loop Theory</strong> (Hattie & Timperley, 2007) demonstrates that immediate, task‑focused feedback accelerates learning dramatically compared to delayed feedback. The <strong>TPACK framework</strong> (Mishra & Koehler, 2006) positions technological knowledge as integral to pedagogy — which AI+GitHub makes accessible to non‑programmers.</p>
+    
+    <p>A recent and highly relevant contribution to this field comes from Balaji, Ogange, and Mays (2025), who introduced the <strong>"Teacher-in-the-Loop AI" (TiL-AI)</strong> model through the Commonwealth of Learning. Their approach positions teachers as active partners in using generative AI to adapt Open Educational Resources (OER) to align with national curricula across India, Ghana, the Pacific region, Jamaica, Kenya, and Nigeria. The authors proposed a six-step co-creation cycle: (1) teacher uses prompts to identify and adapt OER content through GenAI; (2) teacher edits the content; (3) teacher checks sources and copyright compliance; (4) mentor reviews content and licenses; (5) peer reviewers check changes; (6) new OER is published with an appropriate open license (Balaji et al., 2025, p. 441). Central to their model is the concept of teachers as "graders" who refine LLM outputs, ensuring accuracy, relevance, and cultural appropriateness.</p>
+    
+    <p>The Balaji et al. (2025) study is significant for several reasons. First, it validates the broader claim that teacher‑in‑the‑loop approaches to AI are viable across multiple developing countries. Their case studies included: (a) secondary school educators in India creating context‑specific OER for Grade 9 mathematics; (b) a co-creative mentoring model in Ghana integrating gender‑responsive pedagogy; (c) over 800 teachers trained in the Pacific region, with 40 teachers creating 357 lesson plans in one week; (d) teachers from over 30 TVET institutions across Ghana, Jamaica, Kenya, and Nigeria developing OER in Fashion Design and Science Laboratory Technology (Balaji et al., 2025, pp. 442-443). These examples demonstrate the scalability of teacher‑centered AI approaches.</p>
+    
+    <p>Second, their work provides an evaluation rubric for AI‑generated content that includes criteria such as alignment to curriculum standards, quality of explanation, utility for teaching, quality of assessment, accessibility, and license compatibility (Balaji et al., 2025, p. 441). This rubric could be adapted for evaluating the teacher‑created apps in our study.</p>
+    
+    <p>Third, and most importantly for positioning our contribution, <strong>the Balaji et al. (2025) model focuses on adapting existing OER (lesson plans, activities, assessments) — that is, text‑based content.</strong> Our study extends this paradigm significantly. While TiL‑AI empowers teachers to adapt existing resources, our model enables teachers with nearly no prior app experience to create <em>original, functional, interactive software</em> from scratch using AI and GitHub. This is a leap from <strong>content adaptation to software creation</strong>, from static OER to executable apps that provide immediate feedback, simulation, and gamification — capabilities that text‑based OER cannot offer.</p>
+    
+    <p>Recent empirical work on "vibe coding" (Chen et al., 2026; Microsoft Learn, 2025) confirms that beginners can produce functional code via natural language prompts — a finding we extend to primary school teachers in low‑resource contexts using multiple AI platforms (Claude, DeepSeek, Gemini, ChatGPT, Copilot). Parallel studies in South Africa (Naidoo, 2026) and Zanzibar itself (R.O.S.A. ReCoding Africa, 2025) validate teacher‑first, low‑infrastructure AI training models. A large‑scale study in China's Guangxi border areas (Scientific Reports, 2025) identified similar barriers to teacher programming education. The global anxiety about AI rendering traditional skills obsolete has been documented by BBC News (2026), which compared contemporary educational uncertainty to the abolition of China's imperial exams in 1905.</p>
+    
+    <p>Our study is the first to combine these elements into a complete, reproducible model that moves teachers directly from paper‑and‑chalk to AI‑assisted <em>software creation</em>, with explicit offline deployment strategies (Singletary, 2026; Zanzibar MoE, 2023). Together with Balaji et al. (2025), we argue that teacher‑in‑the‑loop AI approaches are viable across a spectrum of content types — from text‑based OER adaptation to executable educational app creation — and that the latter represents a new frontier for empowering teachers in the world's lowest‑resource classrooms.</p>
+
+    <div class="comparison-table">
+        <strong>Table 2: Comparison of Teacher‑in‑the‑Loop AI Approaches</strong>
+        <table>
+            <thead><tr><th>Dimension</th><th>Balaji et al. (2025) — TiL‑AI</th><th>Our Zanzibar Study</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Core activity</strong></td><td>Adapting existing OER using AI</td><td>Creating original apps from scratch using AI</td></tr>
+                <tr><td><strong>Teacher role</strong></td><td>Curator, adapter, grader</td><td>Designer, creator, coder (via vibe coding)</td></tr>
+                <tr><td><strong>Output type</strong></td><td>Text‑based lesson plans, activities, assessments</td><td>Fully functional interactive HTML/JS apps</td></tr>
+                <tr><td><strong>Technical requirement</strong></td><td>Access to LLM + OER repositories</td><td>Any AI tool + GitHub (offline HTML)</td></tr>
+                <tr><td><strong>Offline capability</strong></td><td>Not emphasized</td><td>Explicit offline HTML (download once, use forever)</td></tr>
+                <tr><td><strong>Regional scope</strong></td><td>Multiple countries (India, Ghana, Pacific, Jamaica, Kenya, Nigeria)</td><td>Zanzibar (one region, in‑depth case study)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>3. The Zanzibar Context: Starting from Nearly Zero</h2>
+    <p>Zanzibar's primary schools are among the least digitized in the world. According to the Ministry of Education's 2023 report (Zanzibar MoE, 2023), less than 5% of schools have computers for student use; fewer than 1% of teachers have ever integrated any digital application. Teaching is almost exclusively paper‑and‑chalk. Our participants were 32 teachers (24 female, 8 male; average experience 13 years) from four public primary schools. Inclusion criterion: <strong>nearly no prior use of any educational app</strong>. Nearly all taught with chalkboard (100%) and paper handouts (94%). None had a GitHub account; fewer than 5% had heard of generative AI. Student participants (n=184, grades 3–7) and parents (n=18) were recruited with consent. A district education officer from the Ministry of Education observed two classroom sessions.</p>
+
+    <h2>4. The Complete Reproducible Procedure</h2>
+    <p>The following eight‑step procedure was refined over three training cohorts in Zanzibar. It requires no prior coding experience and works with shared smartphones and intermittent internet. Teachers used a variety of AI tools — Claude, DeepSeek, Gemini, ChatGPT, and Copilot — with similar success rates across platforms.</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.5rem;">
+        <div style="background: #fefdf9; border: 1px solid #d9cdae; border-radius: 16px; padding: 0.8rem 1rem;"><strong>Step 1:</strong> Identify a "hard by hand" concept — e.g., equivalent fractions, Newton's laws, supply/demand shifts, grammar rules.</div>
+        <div style="background: #fefdf9; border: 1px solid #d9cdae; border-radius: 16px; padding: 0.8rem 1rem;"><strong>Step 2:</strong> Write a natural language prompt (include interactivity, local examples, feedback mechanism).</div>
+        <div style="background: #fefdf9; border: 1px solid #d9cdae; border-radius: 16px; padding: 0.8rem 1rem;"><strong>Step 3:</strong> Generate with any AI tool (Claude, DeepSeek, Gemini, ChatGPT, or Copilot) — copy the HTML code.</div>
+        <div style="background: #fefdf9; border: 1px solid #d9cdae; border-radius: 16px; padding: 0.8rem 1rem;"><strong>Step 4:</strong> Test and iterate (2–3 rounds) — tell AI to fix specific issues.</div>
+        <div style="background: #fefdf9; border: 1px solid #d9cdae; border-radius: 16px; padding: 0.8rem 1rem;"><strong>Step 5:</strong> Create free GitHub account (one‑time setup) — github.com.</div>
+        <div style="background: #fefdf9; border: 1px solid #d9cdae; border-radius: 16px; padding: 0.8rem 1rem;"><strong>Step 6:</strong> Create a new repository — name it after your app (e.g., "fraction-game").</div>
+        <div style="background: #fefdf9; border: 1px solid #d9cdae; border-radius: 16px; padding: 0.8rem 1rem;"><strong>Step 7:</strong> Add your HTML file, commit, and push — saves your app online with version history.</div>
+        <div style="background: #fefdf9; border: 1px solid #d9cdae; border-radius: 16px; padding: 0.8rem 1rem;"><strong>Step 8:</strong> Deploy offline — download HTML file once, use on any phone without internet.</div>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- IMAGE PLACEHOLDER – MOST APPROPRIATE LOCATION -->
+    <!-- ============================================= -->
+    <div class="figure-placeholder">
+        <strong>📊 FIGURE 1: The Eight‑Step AI+GitHub Teacher App Creation Model</strong><br>
+        <br>
+        <img src="myModel.png" alt="Flowchart of the eight-step AI+GitHub teacher app creation model showing steps from identifying a hard concept to offline deployment and classroom transformation" style="width:100%; max-width:800px; margin:1rem auto; display:block; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <br>
+        <em>Description:</em> A flowchart diagram showing the complete workflow from identifying a "hard by hand" concept (Step 1) through writing an AI prompt (Step 2), generating HTML code with AI tools (Step 3), testing and iterating (Step 4), GitHub setup and publishing (Steps 5–7), to offline classroom deployment (Step 8). The diagram should also show the transformation outcomes: teacher becomes designer/creator, student becomes proactive explorer, and learning gains of +26% to +64%.<br>
+        <br>
+        <em>Suggested tools to generate this figure:</em> Use the prompts provided in the article's supplementary materials for DALL‑E 3, Midjourney, Adobe Firefly, Canva AI, or Leonardo.ai. Alternatively, a clean vector version can be created using the Mermaid.js code available in the online repository.<br>
+        <br>
+        <em>Caption:</em> “Figure 1. The AI+GitHub leapfrog model for teacher‑created educational apps. After identifying a concept that is difficult to teach with static chalk/paper methods (Step 1), teachers write natural language prompts (Step 2) and use any generative AI tool to produce working HTML/JS code (Step 3). Through iterative testing and refinement with AI assistance (Step 4), the app is improved. Using free GitHub accounts and repositories (Steps 5–7), teachers save, version, and share their apps. Finally, the HTML file is downloaded once and deployed offline on basic phones (Step 8). The result is a transformation of teaching mode: from passive transmission to proactive, interactive discovery, with measured learning gains of +26 to +64 percentage points.”
+    </div>
+
+    <h2>5. Four Case Studies: The New Teaching Mode in Action</h2>
+    <div class="case-box"><strong>📐 Case Study 1: Mathematics – Fraction Equivalence (Teacher Fatma, Grade 4)</strong><br>Following the eight‑step procedure, Teacher Fatma used ChatGPT to create an interactive pizza fraction game. Students discover equivalence by experimenting with sliders. Pre‑test 34% → post‑test 81% (+47 points). Student quote: "Now I see that 2/4 is the same as 1/2 — the pizza shows me!"</div>
+    <div class="case-box"><strong>⚙️ Case Study 2: Physics – Newton's Second Law (Teacher Hamidu, Grade 7)</strong><br>Using Claude, Teacher Hamidu built a force/mass simulation with a locally relevant dhow boat. Students ask "what if" questions and test hypotheses. 41% (previous cohort) → 92% conceptual understanding.</div>
+    <div class="case-box"><strong>📈 Case Study 3: Economics – Supply & Demand (Teacher Mwanaidi, Grade 6)</strong><br>Teacher Mwanaidi used DeepSeek to create shiftable supply/demand curves with local market examples (cloves, fish). Students connect abstract concepts to lived experience. 23% → 87% correct causal explanations.</div>
+    <div class="case-box"><strong>🎮 Case Study 4: Games – Grammar Treasure Hunt (Teacher Aisha, Grade 5)</strong><br>Using Gemini, Teacher Aisha created a pirate‑themed grammar game with immediate rewards. Students replay to improve scores. 52% → 78% test scores. Student: "It doesn't feel like learning — it feels like playing."</div>
+
+    <div class="testimony"><strong>Teacher Fatma (Mathematics):</strong> "The chalkboard made me a speaker. AI+GitHub made me a designer. I used ChatGPT, but my colleague used Claude — we both succeeded. The tool doesn't matter; the method does."</div>
+
+    <h2>6. Download and Offline Use: How to Save Apps Without Internet</h2>
+    <div class="download-section">
+        <p><strong>One of the most important features of this method:</strong> After you generate an app using any AI tool (Claude, DeepSeek, Gemini, ChatGPT, or Copilot), you can save it once and use it forever <strong>without any internet connection</strong>. This is critical for low‑resource classrooms with unreliable or no internet access.</p>
+        
+        <div class="download-method">
+            <h4>📱 Method 1: Direct Download from Browser (Simplest)</h4>
+            <p>After generating your app in any AI tool and copying the code:</p>
+            <ol style="margin-left: 1.5rem;">
+                <li>Open a text editor (Notepad on Windows, TextEdit on Mac, or any simple editor on your phone).</li>
+                <li>Paste the HTML code.</li>
+                <li>Save the file as <code>my-app.html</code> (the <code>.html</code> extension is essential).</li>
+                <li>Transfer the file to any phone via USB, Bluetooth, or SD card.</li>
+                <li>Tap the file — it opens in the phone's browser. <strong>No internet needed after download.</strong></li>
+            </ol>
+            <div class="tip-box">💡 <strong>Pro tip:</strong> On Android, use "Downloads" folder. On iPhone, use "Files" app then "Save to Files".</div>
+        </div>
+
+        <div class="download-method">
+            <h4>📦 Method 2: Download from GitHub (After Publishing)</h4>
+            <p>If you have pushed your app to GitHub (Steps 5–7):</p>
+            <ol style="margin-left: 1.5rem;">
+                <li>Go to your repository on github.com.</li>
+                <li>Click on the <code>.html</code> file.</li>
+                <li>Click the "Raw" button.</li>
+                <li>Right‑click → "Save as" → save the file.</li>
+                <li>Transfer to classroom phones. Works offline immediately.</li>
+            </ol>
+        </div>
+
+        <div class="download-method">
+            <h4>📲 Method 3: Share via WhatsApp (Zero Computer Needed)</h4>
+            <p>Perfect for teachers who only have a phone:</p>
+            <ol style="margin-left: 1.5rem;">
+                <li>After generating the code on your phone, paste it into a text editor app.</li>
+                <li>Save as <code>my-app.html</code>.</li>
+                <li>Open WhatsApp, send the file to yourself (or to a "Saved Messages" chat).</li>
+                <li>On the receiving phone, tap the file → "Open with" → choose browser.</li>
+            </ol>
+            <div class="tip-box">📱 <strong>Offline verification:</strong> After downloading, turn on Airplane Mode and open the file. If it works, you are ready for classroom use with zero internet.</div>
+        </div>
+    </div>
+
+    <h2>7. Hands‑On Tutorial: Create Your Own AI+GitHub Educational App</h2>
+    <p>This section is for <strong>any educator, anywhere</strong>. No coding experience needed. You need: a free account on any AI tool (Claude, DeepSeek, Gemini, ChatGPT, or Copilot), a free GitHub account (optional for sharing), and 45–60 minutes.</p>
+    
+    <div class="code-block">
+<strong>COPY THIS PROMPT INTO ANY AI TOOL (Claude, DeepSeek, Gemini, ChatGPT, or Copilot):</strong><br>
+"Create an HTML/CSS/JS grammar quiz game for primary school English. Topic: past tense (regular and irregular verbs). Show a sentence with a blank: 'Yesterday, I ___ to the market.' with options: go/went/gone. User clicks an answer. If correct, show a green check and add 1 point. If wrong, show a red X and give a hint. After 5 correct answers, show 'Congratulations, you mastered past tense!' Make it colorful, with large buttons, and fully functional on a phone screen. All in one HTML file."
+    </div>
+    <p>After the AI returns the code, save as <code>past-tense-game.html</code>. Test it. Then use the download methods above to transfer it to a classroom phone. You have now created your first offline‑capable, AI‑powered educational app — regardless of which AI tool you used.</p>
+
+    <div class="tip-box">
+        🌐 <strong>Want to publish your app as a live website?</strong> Follow this free, illustrated 6‑step guide: 
+        <a href="https://szhang2025.github.io/WebPage/" target="_blank" style="color: #2c6e48; font-weight: bold;">GitHub Pages · Simple 6-Step Guide</a>. 
+        It shows you how to use DeepSeek AI to create an HTML file and upload it to GitHub Pages — your app will be live at <code>https://yourusername.github.io/your-repo-name/</code> in under 10 minutes.
+    </div>
+
+    <h2>8. Evidence of Impact: What Changed</h2>
+    <div class="comparison-table">
+        <strong>Table 3: Behavioral Indicators of Proactive Learning (per 30‑minute lesson, N=184 students)</strong>
+        <table>
+            <thead><tr><th>Indicator</th><th>Chalkboard Only</th><th>With AI+GitHub Apps</th><th>Change</th></tr></thead>
+            <tbody>
+                <tr><td>Student "what if" questions</td><td>0.2</td><td>3.8</td><td>+1800%</td></tr>
+                <tr><td>Voluntary exploration beyond lesson</td><td>&lt;5% of students</td><td>78% of students</td><td>+73%</td></tr>
+                <tr><td>Peer teaching/debate incidents</td><td>1.2 (mostly copying)</td><td>6.7 (explaining, arguing)</td><td>+458%</td></tr>
+                <tr><td>Off‑task behavior (% of class time)</td><td>38% (after 15 min)</td><td>9% (sustained)</td><td>-76%</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="testimony"><strong>Student Idris, age 12:</strong> "Before, I just memorized that force equals mass times acceleration. I did not know what it meant. With the simulation, I asked myself: what if mass is very big and force is small? I tried it. The boat barely moved. Then I understood. I discovered it myself."</div>
+    <div class="testimony"><strong>Parent Mwanaidi:</strong> "My daughter used to say math is boring. Now she asks to play the fraction game. She explains to me: 'Mama, 1/2 is the same as 2/4.' The teacher changed how she teaches."</div>
+    <div class="testimony"><strong>District Education Officer, Ministry of Education:</strong> "When I saw a teacher who never used a computer open an app she built herself — her students arguing about fractions, asking questions — I realized: this is not the same kind of teaching. This is something new. We must scale this."</div>
+
+    <h2>9. Discussion: Riding the Wave, Not Being Crushed by It</h2>
+    <p>Our findings demonstrate that teachers with nearly no prior app experience can, within days, become creators of personalized, functional educational apps using AI+GitHub. Importantly, this success was not dependent on a single AI tool — teachers used Claude, DeepSeek, Gemini, ChatGPT, and Copilot with comparable results. This platform‑agnostic success is crucial for reproducibility: any freely available generative AI tool can power the leapfrog.</p>
+    
+    <div class="wave-box">
+        🌊 <strong>A metaphor for our times:</strong> AI is like a wave. If you position yourself on the crest, you can travel far and enjoy the journey. If you are caught underneath, you will struggle and drown. The key is not to avoid the wave — it is already here — but to learn to ride it, with whatever board (AI tool) you have. As Hong Kong academic Zhang Zesong described, the goal is to "keep riding on the crest of the wave" rather than being crushed by it (BBC Chinese, 2026).
+    </div>
+    
+    <p>In wealthier education systems, much of the conversation about AI is anxious: parents fear their children will become like the scholars of 1905 — highly trained in skills the world no longer values. Teachers worry about obsolescence. Institutions debate whether to ban or embrace specific AI tools. This anxiety is understandable but, we argue, misplaced. The solution is not to retreat from AI or to ban specific tools, but to <strong>teach students — and teachers — to ride the wave</strong>, using whatever tools are available.</p>
+    
+    <p>Positioning our work within the emerging literature on teacher‑in‑the‑loop AI (Balaji et al., 2025), we see both continuity and extension. The Commonwealth of Learning's TiL‑AI model successfully empowers teachers to adapt existing OER across multiple countries. Our study takes this paradigm a significant step further: we demonstrate that teachers can move from being adapters of existing content to <strong>creators of original, executable software</strong>. This is not merely an incremental improvement. Executable apps provide immediate feedback, simulation, and gamification — capabilities that text‑based OER cannot offer. In Balaji et al.'s terms, our teachers are not just "graders" of AI outputs; they are <strong>designers and coders</strong> who use natural language prompts to build interactive learning environments from scratch.</p>
+    
+    <p>In Zanzibar, there was nearly no pre‑existing digital infrastructure to defend, no entrenched software licenses to justify, no habit of passive app consumption to unlearn. The teachers we trained were not digital natives — but they were <strong>creativity natives</strong>, experts in their subjects, desperate for ways to make abstract concepts vivid. Once given access to tools like Claude, DeepSeek, Gemini, ChatGPT, or Copilot — tools that turned their descriptions into code — they did not hesitate. They rode the wave.</p>
+    
+    <p>The contrast with the TiL‑AI model is instructive. Balaji et al. focus on curriculum alignment and OER licensing — crucial concerns. But our teachers were not constrained by existing OER; they built entirely new apps personalized to their students' local context (mangoes instead of abstract fractions, dhows instead of generic blocks, clove markets instead of generic supply curves). This suggests that AI+GitHub may enable a form of <strong>radical localization</strong> that goes beyond adapting existing resources.</p>
+    
+    <p>Our seed teacher model — where 14 teachers trained 39 peers informally — shows that riding the wave is contagious. Once a teacher experiences the shift from passive transmission to interactive design, they want to share it. This is not top‑down policy; it is peer‑to‑peer propagation. And it works even without external incentives.</p>
+    
+    <p>Limitations remain: short follow‑up (3 months), one region of Zanzibar, reliance on cloud‑based AI (though offline HTML mitigates this). But the direction is clear. The wave is here. The choice is not whether to engage with AI — it is already in our classrooms, whether invited or not. The choice is whether to be carried along or to learn to surf — with Claude, DeepSeek, Gemini, ChatGPT, Copilot, or whatever comes next.</p>
+
+    <h2>10. Reproducibility for Other Low‑Resource Contexts</h2>
+    <p>The Zanzibar model succeeded because it removed the traditional barriers to software creation: syntax (via AI), infrastructure (via offline HTML), and scaling (via seed teachers). These barriers are universal in low‑resource settings. Therefore, the solution is also universal — and not tied to any single AI platform. Contexts where we believe this model is directly applicable include: rural schools in sub‑Saharan Africa (Uganda, Malawi, Zambia), refugee camp schools (Kakuma, Rohingya camps), indigenous communities in Latin America (Quechua, Aymara regions), remote island nations, and underserved areas of South Asia (rural India, Bangladesh, Nepal).</p>
+    <div class="tip-box">🌍 <strong>Adaptation guide:</strong> Replace mangoes with local staples, dhows with local transport, cloves with local market goods. Use any available AI tool (Claude, DeepSeek, Gemini, ChatGPT, or Copilot). Prompt in local language + English. Use the same eight steps. The wave is the same everywhere.</div>
+
+    <h2>11. Conclusion: The Chalkboard Is Not Enough — But You Can Ride the Wave Today</h2>
+    <p>The chalkboard served faithfully for two centuries. But it was never enough. It cannot show motion, provide feedback, adapt to individual pace, or let students explore. The scholars of 1905 studied for a world that vanished. We have the chance to do something different. AI+GitHub — with Claude, DeepSeek, Gemini, ChatGPT, Copilot, or any generative AI — does not replace the chalkboard. It does something more important: it <strong>enables a new genre of teaching</strong> — one that positions students as proactive explorers, not passive receptors. Together with parallel efforts like the Commonwealth of Learning's Teacher‑in‑the‑Loop AI initiative (Balaji et al., 2025), we are witnessing the emergence of a new paradigm: teachers as active, empowered creators in the AI era.</p>
+    <p>You do not need to be a programmer. You do not need expensive equipment or a specific AI tool. You need a lesson you care about, a description of how you want students to interact with it, and 45 minutes. Any modern AI will write the code. You save it once. It works offline forever. Your students become proactive. The wave is here. Ride it — with whatever board you have.</p>
+
+    <hr>
+
+    <h2>References</h2>
+    <ol style="margin-left: 1.5rem; line-height: 1.6;">
+        <li>Balaji, V., Ogange, B. O., &amp; Mays, T. (2025). Teacher in the Loop AI (TiL-AI): A strategy for empowering educators in developing countries through OER adaptation. <em>Journal of Learning for Development</em>, 12(2), 439-445.</li>
+        <li>BBC Chinese. (2026, April 30). AI冲击教育: 中国家长怕孩子成"科举被废后的秀才" [AI impacts education: Chinese parents fear their children will become "xiucai after the abolition of the imperial exam"]. <em>BBC News 中文</em>.</li>
+        <li>Chen, A. J., Cao, Y., Shao, M., Karri, R., &amp; Shafique, M. (2026). Code for All: Educational applications of 'vibe coding' hackathon in programming education across all skill levels. <em>arXiv:2604.22747</em>.</li>
+        <li>City University of Hong Kong. (2026, March 24). <em>CityUHK partners with Tencent to nurture AI teaching talent and strengthen youth technology literacy</em> [Press release].</li>
+        <li>Deci, E. L., &amp; Ryan, R. M. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. <em>American Psychologist</em>, 55(1), 68–78.</li>
+        <li>Hattie, J., &amp; Timperley, H. (2007). The power of feedback. <em>Review of Educational Research</em>, 77(1), 81–112.</li>
+        <li>Microsoft Learn. (2025). <em>Introduction to Vibe Coding</em>. Microsoft Documentation.</li>
+        <li>Mishra, P., &amp; Koehler, M. J. (2006). Technological pedagogical content knowledge: A framework for teacher knowledge. <em>Teachers College Record</em>, 108(6), 1017–1054.</li>
+        <li>Naidoo, O. (2026). <em>Teachers First: Building AI Practices That Work in South Africa</em>. Digital Promise.</li>
+        <li>Piaget, J. (1952). <em>The origins of intelligence in children</em>. International Universities Press.</li>
+        <li>Piaget, J. (1954). <em>The construction of reality in the child</em>. Basic Books.</li>
+        <li>R.O.S.A. ReCoding Africa. (2025). <em>Training Teachers for Tomorrow: Transforming Digital Education in Zanzibar</em>.</li>
+        <li>Scientific Reports. (2025). Assessing programming education needs of primary and secondary teachers in Guangxi border areas. <em>Nature</em>, 15, 12513.</li>
+        <li>Singletary, D. (2026). <em>Using GitHub Classroom for Software Development Instruction</em>. National IT Innovation Center.</li>
+        <li>Vygotsky, L. S. (1978). <em>Mind in society: The development of higher psychological processes</em>. Harvard University Press.</li>
+        <li>Zanzibar Ministry of Education and Vocational Training. (2023). <em>Annual Report: Digital Infrastructure in Primary Schools</em>.</li>
+    </ol>
+
+    <hr>
+    <footer style="font-size: 0.75rem; text-align: center; color: #736e58; margin-top: 2rem;">
+        This work is openly licensed. Share it, adapt it, translate it. The wave belongs to everyone who is willing to ride it — with Claude, DeepSeek, Gemini, ChatGPT, Copilot, or whatever comes next.
+    </footer>
+</div>
+</body>
+</html>
